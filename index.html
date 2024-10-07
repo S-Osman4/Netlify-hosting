@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles.css" />
     <title>AI Japanese Pun Generator</title>
   </head>
@@ -30,16 +36,23 @@
           </form>
           <div class="hint">i.e: Flower, Bird or Town</div>
         </div>
-        <div class="pun hidden" id="pun"></div>
-      </main>
 
+        <div class="pun-container hidden" id="pun-container">
+          <div class="pun-section" id="word"></div>
+          <div class="pun-section" id="japanese-pun"></div>
+          <div class="pun-section" id="kana"></div>
+          <div class="pun-section" id="romaji"></div>
+          <div class="pun-section" id="translation"></div>
+          <div class="pun-section" id="explanation"></div>
+        </div>
+      </main>
 
     <footer>
       <p>
-        This was a netlify hosting project open sourced on
-        <a href="https://github.com/S-Osman4/Netlify-hosting">Github</a> and
+        This project created by 
+        <a href="https://www.linkedin.com/in/shamso-osman" target="_blank">Shamso Osman</a> and
         hosted on
-        <a href="https://ai-project-shecodes.netlify.app/">Netlify.</a>
+        <a href="https://ai-project-shecodes.netlify.app/" target="_blank">Netlify</a>.
       </p>
     </footer>
     <script src="./src/index.js"></script>

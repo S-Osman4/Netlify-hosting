@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(174deg, #ffbdbd -1.1%, #e3b6ee 86.9%);
+  background: #ffbdbd;
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -62,15 +62,57 @@ form {
   font-size: 16px;
   border-radius: 50px;
   padding: 14px 24px;
+  box-shadow: 10px 5px #ffbdbd;
+}
+.submit-button:active {
+  background: #0a7474;
+  box-shadow: 0 2px;
+  transform: translateX(8px);
 }
 
-.pun {
+.pun-container {
+  margin-bottom: 30px;
+}
+
+.pun-section {
   font-size: 16px;
   background-color: #fff;
   padding: 20px;
   line-height: 2;
   border-left: 3px solid #0a7474;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+  margin-bottom: 10px;
+}
+
+.pun-section:empty {
+  display: none;
+}
+
+#word,
+#japanese-pun {
+  font-family: "Kosugi Maru", "Noto Sans JP", sans-serif;
+}
+
+#romaji,
+#translation,
+#explanation {
+  font-family: "Poppins", sans-serif;
+}
+
+#kana {
+  font-family: "Kosugi Maru", "Noto Sans JP", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.japanese {
+  font-family: "Kosugi Maru", "Noto Sans JP", sans-serif;
+}
+
+.english {
+  font-family: "Poppins", sans-serif;
 }
 
 .hidden {
@@ -85,4 +127,29 @@ footer {
   text-align: center;
   font-size: 13px;
   margin-top: 30px;
+}
+
+.loading-spinner {
+  display: inline-block;
+  animation: spin 2s infinite linear;
+  opacity: 0;
+  animation: spin 2s infinite linear, fadeIn 0.3s forwards;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
